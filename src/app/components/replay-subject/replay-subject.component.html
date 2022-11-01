@@ -1,0 +1,46 @@
+<div class="my-3">
+    <div class="row">
+        <div class="col">
+            <h3>
+                <h3>Replay Subject Add Video</h3>
+            </h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-center my-5">
+        <div class="col-md-4">
+            <input type="text" class="form-control" #video>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-sm btn-success" (click)="updateVideo(video.value)">Add Video</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 video-container">
+            <strong class="pl-10">User 01{{usersList1 | json}}</strong>
+            <hr />
+            <ul>
+                <li *ngFor="let user of usersList1"> <strong>Video : </strong> {{user}}</li>
+            </ul>
+
+        </div>
+        <div class="col-md-4 video-container">
+            <strong class="pl-10">User 02 {{usersList2 | json}}</strong>
+            <hr />
+            <ul>
+                <li *ngFor="let user of usersList2"> <strong>Video : </strong> {{user}}</li>
+            </ul>
+            <button class="btn btn-sm btn-primary ml-10" (click)="createUser2List()">Subscribe</button>
+        </div>
+        <div class="col-md-4 video-container">
+            <strong class="pl-10">User 03</strong>
+            <hr />
+            <ul>
+                <li> <strong>Video : </strong> VideoName</li>
+                <li> <strong>Video : </strong> VideoName</li>
+                <li> <strong>Video : </strong> VideoName</li>
+            </ul>
+            <button class="btn btn-sm btn-primary ml-10">Subscribe</button>
+        </div>
+    </div>
+</div>

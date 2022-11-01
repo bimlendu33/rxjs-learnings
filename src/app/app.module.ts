@@ -12,9 +12,23 @@ import { FromOperatorComponent } from './components/from-operator/from-operator.
 import { FromEventOperatorComponent } from './components/from-event-operator/from-event-operator.component';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
 import { IntervalTimerComponent } from './components/interval-timer/interval-timer.component';
+import { CustomObservablesComponent } from './components/custom-observables/custom-observables.component';
+import { SubjectComponent } from './components/subject/subject.component';
+import { ReplaySubjectComponent } from './components/replay-subject/replay-subject.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, OfOperatorComponent, FromOperatorComponent, FromEventOperatorComponent, AsyncAwaitComponent, IntervalTimerComponent],
+  declarations: [
+    AppComponent,
+    LandingComponent,
+    OfOperatorComponent,
+    FromOperatorComponent,
+    FromEventOperatorComponent,
+    AsyncAwaitComponent,
+    IntervalTimerComponent,
+    CustomObservablesComponent,
+    SubjectComponent,
+    ReplaySubjectComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),

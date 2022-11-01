@@ -19,7 +19,6 @@ export class FromEventOperatorComponent implements OnInit, AfterViewInit {
   constructor() {}
   ngAfterViewInit(): void {
     fromEvent(this.username.nativeElement, 'keyup').subscribe((res: any) => {
-      console.log('res ', res.target.value);
       this.userName = res.target.value;
     });
   }

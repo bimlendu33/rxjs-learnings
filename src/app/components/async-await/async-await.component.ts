@@ -12,7 +12,6 @@ export class AsyncAwaitComponent implements OnInit {
   ngOnInit(): void {
     this.getUserDetals().then((res) => {
       this.details = res;
-      console.log('test', this.details);
     });
   }
 
