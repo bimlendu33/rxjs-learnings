@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
+import { ConcatMapComponent } from './components/concat-map/concat-map.component';
 import { ConcatMergeComponent } from './components/concat-merge/concat-merge.component';
 import { CustomObservablesComponent } from './components/custom-observables/custom-observables.component';
 import { FromEventOperatorComponent } from './components/from-event-operator/from-event-operator.component';
@@ -12,6 +13,7 @@ import { MergeMapComponent } from './components/merge-map/merge-map.component';
 import { OfOperatorComponent } from './components/of-operator/of-operator.component';
 import { ReplaySubjectComponent } from './components/replay-subject/replay-subject.component';
 import { SubjectComponent } from './components/subject/subject.component';
+import { SwitchMapComponent } from './components/switch-map/switch-map.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent, pathMatch: 'full' },
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path: 'replaysubject', component: ReplaySubjectComponent },
   { path: 'concat-merge', component: ConcatMergeComponent },
   { path: 'merge-map', component: MergeMapComponent },
+  { path: 'concat-map', component: ConcatMapComponent },
+  { path: 'switch-map', component: SwitchMapComponent },
 ];
 
 @NgModule({

@@ -17,6 +17,8 @@ import { SubjectComponent } from './components/subject/subject.component';
 import { ReplaySubjectComponent } from './components/replay-subject/replay-subject.component';
 import { ConcatMergeComponent } from './components/concat-merge/concat-merge.component';
 import { MergeMapComponent } from './components/merge-map/merge-map.component';
+import { ConcatMapComponent } from './components/concat-map/concat-map.component';
+import { SwitchMapComponent } from './components/switch-map/switch-map.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { MergeMapComponent } from './components/merge-map/merge-map.component';
     ReplaySubjectComponent,
     ConcatMergeComponent,
     MergeMapComponent,
+    ConcatMapComponent,
+    SwitchMapComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, of } from 'rxjs';
-import { map, mergeAll, mergeMap, take } from 'rxjs/operators';
+import { from, interval, of } from 'rxjs';
+import { concatMap, map, mergeAll, mergeMap, take, toArray } from 'rxjs/operators';
 
 @Component({
   selector: 'app-merge-map',
@@ -10,22 +10,32 @@ import { map, mergeAll, mergeMap, take } from 'rxjs/operators';
 export class MergeMapComponent implements OnInit {
   constructor() {}
 
+  intervalObser!: any;
+  mergerMapList: any[] =[];
+
   ngOnInit(): void {
-    let sample = of(1, 2, 3, 4, 5, 6, 7);
+    this.intervalObser = interval(1000).pipe(take(4));
 
     // nested subscription
-    sample.pipe(map((item) => of(item))).subscribe((res) => {
-      res.subscribe((res1) => {
-        console.log('no mergemap', res1);
+    this.intervalObser.pipe(map((item) => of(item))).subscribe((res: any) => {
+      res.subscribe((res1: any) => {
+        //  console.log('no mergemap', res1);
       });
     });
 
-    sample.pipe(map((item) => of(item)), mergeAll()).subscribe((res) => {
-      console.log('mergeAll ', res);
-    });
+    this.intervalObser
+      .pipe(
+        map((item) => of(item)),
+        mergeAll()
+      )
+      .subscribe((res: any) => {
+        // console.log('mergeAll ', res);
+      });
 
-    sample.pipe(mergeMap(item => of(item))).subscribe((res) => {
-      console.log('mergeMap ', res);
-    });
+    this.intervalObser
+      .pipe(mergeMap((item) => of('MergeMap ' + item)))
+      .subscribe((res: any) => {
+        this.mergerMapList.push(res);
+      });
   }
 }
