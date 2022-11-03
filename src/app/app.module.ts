@@ -15,6 +15,8 @@ import { IntervalTimerComponent } from './components/interval-timer/interval-tim
 import { CustomObservablesComponent } from './components/custom-observables/custom-observables.component';
 import { SubjectComponent } from './components/subject/subject.component';
 import { ReplaySubjectComponent } from './components/replay-subject/replay-subject.component';
+import { ConcatMergeComponent } from './components/concat-merge/concat-merge.component';
+import { MergeMapComponent } from './components/merge-map/merge-map.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ReplaySubjectComponent } from './components/replay-subject/replay-subje
     CustomObservablesComponent,
     SubjectComponent,
     ReplaySubjectComponent,
+    ConcatMergeComponent,
+    MergeMapComponent,
   ],
   imports: [
     BrowserModule,
