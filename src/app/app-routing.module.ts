@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AsyncAwaitComponent } from './components/async-await/async-await.component';
+import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
 import { ConcatMapComponent } from './components/concat-map/concat-map.component';
 import { ConcatMergeComponent } from './components/concat-merge/concat-merge.component';
 import { CustomObservablesComponent } from './components/custom-observables/custom-observables.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'merge-map', component: MergeMapComponent },
   { path: 'concat-map', component: ConcatMapComponent },
   { path: 'switch-map', component: SwitchMapComponent },
+  { path: 'combine-latest', component: CombineLatestComponent },
 ];
 
 @NgModule({

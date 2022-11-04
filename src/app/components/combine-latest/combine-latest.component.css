@@ -1,0 +1,9 @@
+.wrapper-layout {
+  display: block;
+}
+
+@media (max-width: 320px) {
+  .wrapper-layout {
+    display: none;
+  }
+}

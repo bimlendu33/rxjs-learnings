@@ -1,0 +1,5 @@
+@media (max-width: 375) {
+  .app-component-wrapper {
+    margin: 10px;
+  }
+}
